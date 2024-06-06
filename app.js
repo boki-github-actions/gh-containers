@@ -1,7 +1,10 @@
 import bodyParser from 'body-parser';
 import express from 'express';
+import * as dotenv from "dotenv";
 
 import eventRoutes from './routes/events.js';
+
+dotenv.config();
 
 const app = express();
 
