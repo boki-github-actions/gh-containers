@@ -9,12 +9,6 @@ const dbUser = process.env.MONGODB_USERNAME;
 const dbPassword = process.env.MONGODB_PASSWORD;
 const dbName = process.env.MONGODB_DB_NAME;
 
-console.log('connectionProtocol', connectionProtocol)
-console.log('clusterAddress', clusterAddress)
-console.log('dbUser', dbUser)
-console.log('dbPassword', dbPassword)
-console.log('dbName', dbName)
-
 const uri = `${connectionProtocol}://${dbUser}:${dbPassword}@${clusterAddress}/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri);
 
